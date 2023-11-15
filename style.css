@@ -1,0 +1,312 @@
+h1,
+h2,
+h3,
+p,
+li {
+  color: #ffffffe5;
+  margin: 0;
+  font-family: "Averia Serif Libre", serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffffb9;
+}
+a {
+  text-decoration: none;
+}
+.card {
+  overflow: hidden;
+  height: 70vh;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  position: absolute;
+  border: 3px solid #2454e3;
+  box-shadow: 5px 5px 40px #b41f73;
+  display: flex;
+}
+
+.card:hover {
+  border: 3px solid #b41f73;
+  box-shadow: 5px 5px 40px #2454e3;
+}
+
+.myImage {
+  width: 25vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  transition: all 0.6s ease;
+}
+
+.card:hover .myImage {
+  transform: rotateY(180deg);
+}
+
+.collapsible1 {
+  width: 35vw;
+  background-color: #2454e3;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+.leftContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover .collapsible1 {
+  width: 0px;
+}
+
+.collapsible2 {
+  width: 0vw;
+  background-color: #b41f73;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+
+.card:hover .collapsible2 {
+  width: 35vw;
+}
+.head {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 14px;
+}
+.name,
+.designation {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.smallIntro {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #ffffffb9;
+  font-family: "Averia Sans Libre", sans-serif;
+  margin-top: 10px;
+}
+.listItem {
+  font-weight: 300;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.button {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  padding: 10px 50px;
+  border-radius: 100px;
+  background-color: #b41f73;
+  margin-top: 20px;
+}
+/* uouioyioyioyioyioy */
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolioCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  height: 65%;
+}
+.portfolioCard {
+  height: 100%;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.portfolioImage {
+  object-fit: cover;
+}
+.portfolioData {
+  display: flex;
+  font-weight: 500;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #2454e370;
+  flex-direction: column;
+  backdrop-filter: blur(3px);
+  display: none;
+}
+.portfolioCard:hover .portfolioData {
+  display: flex;
+}
+.portfolioName {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  width: 80%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.portfolioIntro {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 10px 0;
+  width: 80%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.portfolioButton {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 600;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.portfolioImage {
+  height: 100%;
+  width: 100%;
+}
+.contacts {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 25%;
+}
+.card:hover .contacts {
+  display: flex;
+}
+.contacts .fa-brands {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contacts .fa-brands:hover {
+  background-color: #2454e3;
+  box-shadow: 3px 3px 20px #2454e3;
+
+  color: white !important;
+  scale: 1.2;
+}
+
+@media (max-width: 850px) {
+  .card {
+    flex-direction: column;
+    height: fit-content;
+    max-height: 90vh;
+    overflow-y: scroll;
+    width: 80vw;
+  }
+  .collapsible1 {
+    width: 100%;
+    height: fit-content;
+  }
+  .myImgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .myImage {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100px;
+  }
+  .skillItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .collapsible2 {
+    width: 100%;
+  }
+  .portfolioCards {
+    height: fit-content;
+  }
+  .contacts {
+    height: fit-content;
+    margin: 20px 0;
+    display: flex;
+  }
+  .card:hover .collapsible1,
+  .card:hover .collapsible2 {
+    width: 100%;
+  }
+  .portfolioData {
+    display: flex;
+  }
+}
+@media (max-width: 500px) {
+  .name {
+    font-size: 1.5rem;
+  }
+  .designation {
+    font-size: 1.125rem;
+  }
+  .smallIntro {
+    font-size: 1rem;
+  }
+  .listItem {
+    font-size: 0.875rem;
+  }
+  .head {
+    font-size: 0.75rem;
+  }
+  .button {
+    width: 40%;
+    padding: 5px 30px;
+    border-radius: 100px;
+    margin-top: 15px;
+    font-size: 0.875rem;
+  }
+  .contacts {
+    margin-top: 0;
+  }
+  .contacts .fa-brands {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  .portfolioName {
+    font-size: 0.75rem;
+  }
+  .portfolioIntro {
+    font-size: 10px;
+    margin: 5px 0;
+    -webkit-line-clamp: 2;
+    font-size: 0.5rem;
+  }
+  .portfolioButton {
+    padding: 3px 5px;
+    font-weight: 500;
+    font-size: 0.5rem;
+  }
+}
